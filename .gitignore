@@ -1,0 +1,14 @@
+# makepkg working directories
+/src/
+/pkg/
+
+# Downloaded upstream archive
+/septabee_linux_B_T2.7z
+
+# Built binary and source packages
+/*.pkg.tar.*
+/*.src.tar.*
+
+# Local agent configuration
+/.agents/
+/.codex/
