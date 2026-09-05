@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Septabee
+Comment=Create and edit music
+Exec=/usr/bin/septabee
+TryExec=/usr/bin/septabee
+Icon=septabee
+Terminal=false
+Categories=AudioVideo;Audio;Music;

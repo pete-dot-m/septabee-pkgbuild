@@ -7,6 +7,8 @@ makepkg -si
 septabee
 ```
 
+You can also launch **Septabee** from your desktop's application menu.
+
 The normal Arch `base-devel` build environment is required. `makepkg` uses
 libarchive to extract the 7z download, so a separate 7zip dependency is not
 needed. The upstream checksum is the flake's SHA-256 converted to hex.
