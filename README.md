@@ -1,5 +1,7 @@
 # Septabee Arch package
 
+Inspired by and ported from the Nix flakes from [Fiona42069](https://github.com/Fiona42069/septabee-flake/blob/main/flake.nix) and [TaeruAlethea](https://github.com/TaeruAlethea/nix-config/blob/main/flake.nix)
+
 Build and install on Arch:
 
 ```sh
@@ -7,11 +9,9 @@ makepkg -si
 septabee
 ```
 
-You can also launch **Septabee** from your desktop's application menu.
-
 The normal Arch `base-devel` build environment is required. `makepkg` uses
 libarchive to extract the 7z download, so a separate 7zip dependency is not
-needed. The upstream checksum is the flake's SHA-256 converted to hex.
+needed. The upstream checksum is the original flake's SHA-256 converted to hex.
 
 Binaries, helper programs, fonts, and data live together in
 `/usr/lib/septabee`. `/usr/bin/septabee` creates the same per-user ABI directory
