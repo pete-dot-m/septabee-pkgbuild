@@ -1,7 +1,7 @@
 pkgname=septabee-bin
 # Arch versions cannot contain hyphens; preserve the flake's yeet-44 label.
 pkgver=0.1
-pkgrel=4
+pkgrel=5
 pkgdesc='Septabee (upstream prebuilt Linux binaries)'
 arch=('x86_64')
 url='https://septabee.nekoweb.org/'
@@ -9,7 +9,7 @@ url='https://septabee.nekoweb.org/'
 license=('custom')
 depends=('bash' 'glibc' 'gcc-libs' 'libpng' 'zlib' 'vulkan-icd-loader'
   'freetype2' 'pipewire' 'libx11' 'lilv' 'zstd' 'ncurses'
-  'wayland' 'libxkbcommon' 'libcap')
+  'wayland' 'libxkbcommon' 'libcap' 'systemd')
 makedepends=('python')
 install=septabee.install
 provides=('septabee')
@@ -24,7 +24,7 @@ source=('septabee_linux_B_T2.7z::https://septabee.nekoweb.org/important_stuff/SE
 noextract=('septabee-jit-abi-8.sbrt')
 sha256sums=('38c9db4414e4bbcca2e1bdc0cbb77bd046c1fded9087e3dfccad8ef2a445a1a0'
   'fd9ab122c5a5566cbdb73926ecc8374458aaca3f66fa45d003fda6dc0dd11cb8'
-  '11c495920ec8682a8f67c28fff923aaf4ae62ba6bef6605c48f5af969789f192'
+  '15827480f461a7538a754471d548a35a7f7f7f875e51d7e004d604ad2731da34'
   '4173020d11dc4545b6d1788a671c854c6662858b378aef4d0f5da20b3c5762b6'
   '5708d94e9fd33ac4983d6b2d6765a8adbb32ca05332f06c2d37a891198cfe9e3'
   '6fe6fa3ecf6ee531824a26551f3162b90ebe38d3eb7c5ca7b253326296a0a34a')

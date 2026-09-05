@@ -2,7 +2,7 @@
 Type=Application
 Name=Septabee
 Comment=Create and edit music
-Exec=/usr/bin/septabee
+Exec=/usr/bin/systemd-run --user --collect --property=LimitRTTIME=infinity -- /usr/bin/septabee
 TryExec=/usr/bin/septabee
 Icon=septabee
 Terminal=false

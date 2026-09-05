@@ -33,6 +33,11 @@ needed for a fresh installation of this packaged version.
 
 ## Realtime capability
 
+The desktop entry starts Septabee through a transient systemd user service
+with `LimitRTTIME=infinity`. This prevents a zero realtime CPU-time limit
+inherited from the desktop launcher from disabling audio. Terminal launches
+continue to use `/usr/bin/septabee` directly.
+
 The package grants `CAP_SYS_NICE` to the app and sound helper after installation
 and upgrades through `septabee.install`, matching the flake's NixOS module.
 This permits elevated scheduling priority.
