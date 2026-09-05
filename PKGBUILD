@@ -15,7 +15,7 @@ install=septabee.install
 provides=('septabee')
 conflicts=('septabee')
 options=('!strip' '!debug')
-source=('septabee_linux_B_T2.7z::https://septabee.nekoweb.org/important_stuff/SEPTABEE_DOWNLOADS/version_B/septabee_linux_B_T2.7z'
+source=('septabee_linux_B_T3.7z::https://septabee.nekoweb.org/important_stuff/SEPTABEE_DOWNLOADS/version_B/septabee_linux_B_T3.7z'
   'septabee-launcher'
   'septabee.desktop'
   'septabee.png'

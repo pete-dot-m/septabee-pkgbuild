@@ -3,7 +3,7 @@
 /pkg/
 
 # Downloaded upstream archive
-/septabee_linux_B_T2.7z
+/septabee_linux_B_*.7z
 /septabee-jit-abi-8.sbrt
 
 # Built binary and source packages
