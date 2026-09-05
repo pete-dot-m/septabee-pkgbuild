@@ -1,5 +1,6 @@
 post_install() {
-  setcap cap_sys_nice=ep /usr/lib/septabee/septabee /usr/lib/septabee/septabee-sounds
+  setcap cap_sys_nice=ep /usr/lib/septabee/septabee
+  setcap cap_sys_nice=ep /usr/lib/septabee/septabee-sounds
 }
 
 post_upgrade() {

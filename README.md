@@ -19,24 +19,29 @@ as the Nix wrapper and launches from the asset directory. Arch's standard
 library paths replace Nix's `autoPatchelfHook`; no binary patching is needed.
 The two Nix Wayland dependencies map to one Arch `wayland` package.
 
-## Optional realtime capability
+## LLVM/JIT runtime
 
-The flake's NixOS module separately grants `CAP_SYS_NICE` to the app and sound
-helper. The package does not grant this automatically. To reproduce that
-capability setup, with Arch's `libcap` installed:
+The package includes Septabee's ABI-8 JIT runtime (release 2), downloaded and
+checksum-verified at build time. Python is needed only to extract its custom
+SBRT container during the build. The system `llvm` package is not required.
 
-```sh
-sudo setcap cap_sys_nice=ep /usr/lib/septabee/septabee /usr/lib/septabee/septabee-sounds
-```
+On launch, a fresh or incomplete runtime directory is populated from the
+packaged copy into `$XDG_DATA_HOME/Septabee/llvm-stuffs/abi-8` (default:
+`~/.local/share/Septabee/llvm-stuffs/abi-8`). Existing complete runtimes are
+preserved, including updates installed by the app. No online installer is
+needed for a fresh installation of this packaged version.
 
-This permits elevated scheduling priority. Package upgrades replace the files,
-so reapply the command after upgrades if you use it.
+## Realtime capability
+
+The package grants `CAP_SYS_NICE` to the app and sound helper after installation
+and upgrades through `septabee.install`, matching the flake's NixOS module.
+This permits elevated scheduling priority.
 
 ## Limitations
 
 The archive includes no license text, including for its bundled fonts.
 `license=('custom')` is a placeholder; check upstream redistribution terms
-and include the applicable license files before publishing this package.
-Building the package does not validate GUI startup, audio, or the app's
-runtime LLVM downloads. Additional libraries loaded by plugins or optional
+and include the applicable license files before publishing this package,
+including terms for the bundled JIT runtime.
+Building the package does not validate GUI startup or audio. Additional libraries loaded by plugins or optional
 graphics backends may require additional packages.
